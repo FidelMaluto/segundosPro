@@ -1,0 +1,18 @@
+{
+  "name": "js-ordinary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "eslint": "^9.39.1",
+    "inquirer": "^12.10.0"
+  },
+  "type": "module"
+}

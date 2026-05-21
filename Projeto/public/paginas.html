@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <script src="escript.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body id="bd">
+    <header>
+        <div class="divi">
+        <a href="#"><i class="fas fa-arrow-left"></i></a>
+        <h1>Mensagens</h1>
+    </div>
+        
+        <div class="divi">
+        <a href="#"><i class="fas fa-phone"></i></a>
+        <a href="#"><i class="fas fa-video-camera"></i></a>
+        <a href="#" onclick="modo()" ondblclick="alterModo()"><i class="fas fa-ellipsis-v"></i></a>
+        </div>
+    </header>
+    <section class="main">
+
+            <!--CHAT PROPRIAMENTE DITO-->
+               <div class="chat-messages" id="bate-papo">
+                    <!-- As mensagens aparecem aqui! -->
+                    <!--<img  id="preview" style="max-width: 200px; margin-top: 10px;">--> 
+               </div>
+    </section>
+    <footer>
+        <label for="imgUpload" class="update-btn"><i class="fas fa-camera"></i></label>
+        <input type="file" id="imgUpload" accept="image/*" style="display: none;">
+        <a href="#"><i class="fas fa-paperclip"></i></a>
+        <textarea placeholder="Escrever Mensagem..." oninput="toggleB()" id="messageField"></textarea>
+        <a href="#" id="micB"><i class="fas fa-microphone"></i></a>
+        <a href="#" id="sendB" onclick="sendB()"  style="display: none;"><i class="fas fa-paper-plane"></i>enviar</a>
+        <!--<input type="file" accept="audio/*">-->
+    </footer>
+</body>
+</html>

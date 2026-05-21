@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloco de Notas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #121212;
+      color: #fff;
+      padding-top: 70px;
+      padding-bottom: 60px;
+    }
+
+    header, footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      background-color: #1e1e1e;
+      z-index: 10;
+      text-align: center;
+      padding: 15px;
+    }
+
+    header {
+      top: 0;
+      border-bottom: 1px solid #333;
+    }
+
+    footer {
+      bottom: 0;
+      border-top: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .note {
+      display: flex;
+      align-items: center;
+      background: #1e1e1e;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      color: #fff;
+    }
+
+    .red { background-color: #b00020; }
+    .orange { background-color: #ff9800; }
+    .green { background-color: #4caf50; }
+
+    .details h2 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .details p {
+      margin: 4px 0;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .details span {
+      font-size: 0.75rem;
+      color: #90caf9;
+    }
+
+    /* Botão flutuante */
+    .add-btn {
+      position: fixed;
+      bottom: 75px;
+      right: 20px;
+      background-color: #90caf9;
+      color: #000;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 28px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-btn:hover {
+      background-color: #64b5f6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📝 Minhas Tarefas</h1>
+  </header>
+
+  <div class="container">
+    <section class="note">
+      <div class="circle red">C</div>
+      <div class="details">
+        <h2>Comprar pão</h2>
+        <p>🏠 Casa • 08:30 AM</p>
+        <span>Importante</span>
+      </div>
+    </section>
+
+    <section class="note">
+      <div class="circle orange">T</div>
+      <div class="details">
+        <h2>Trabalho de grupo</h2>
+        <p>📚 Escola • 10:00 AM</p>
+        <span>Urgente</span>
+      </div>
+    </section>
+
+    <section class="note">
+      <div class="circle green">L</div>
+      <div class="details">
+        <h2>Ligar para Deby</h2>
+        <p>📞 Pessoal • 12:00 PM</p>
+        <span>Pessoal</span>
+      </div>
+    </section>
+    
+    <section class="note">
+      <div class="circle red">C</div>
+      <div class="details">
+        <h2>Comprar pão com o Fofo na casa da tia dele no mato entre outros caminhos parecidos com os meus e os teus doces labios oko</h2>
+        <p>🏠 Casa dos tios e cunhados atoa e inresponsáveis dele no cazenga • 08:30 AM</p>
+        <span>Importante</span>
+      </div>
+    </section>
+    
+  </div>
+
+  <button class="add-btn">+</button>
+
+  <footer>
+    <p>© 2025 Fidel Maluto</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumi APIs</title>
+</head>
+
+<body>
+    <input type="url" id="url" placeholder="digite uma URL">
+    <button onclick="consumirAPI()">Consumir</button>
+    <ul id="lista"></ul>
+
+    <script>
+
+        //função asyncróna para pegar ou consumir dados de uma API.
+        async function consumirAPI() {
+
+            const url = document.getElementById('url').value;
+
+            try {
+                const resp = await fetch(url);
+                const dados = await resp.json();
+                
+                document.getElementById('lista').textContent = JSON.stringify(dados)
+
+            } catch (err) {
+                document.getElementById('lista').textContent = "Erro ao consumir dados: " + err.message;
+            }
+        }
+
+        consumirAPI();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="chat-app.css">
+     <title>Bate-papo</title>
+     
+</head>
+<body>
+     
+          <div class="chat-container">
+               <div class="chat-header">
+                    <h1>FEST Chat</h1>
+               </div>
+               <div class="chat-messages" id="bate-papo">
+                    <!-- As mensagens aparecem aqui! -->
+               </div>
+               <div class="chat-input">
+                  <div class="files"><div class="pos-meno"><input type="file" placeholder="Imagem" id="image" accept="image/*">
+                    <input type="file" placeholder="Vídeo">
+                    <option>Câmera</option></div><nav class="more"><option class="opt-more">+</option></nav></div>  
+                    <textarea type="text" id="message" placeholder="Mensagen..."></textarea>
+                    <button onclick="enviar()">Enviar</button> <img onclick="sendAudio()" class="sendAudio" src="iniciar.png" alt="áudio">
+               </div>
+          </div>
+     
+</body>
+
+<script>
+     // Função para mostrar a mensagem na tela!
+     function enviar(){
+          // Busca o valor da área de texto!
+          const message = document.getElementById('message').value;
+          // Cria uma elemento!
+          const nav = document.createElement('nav');
+          // Escreve a mensagem no elemento criado, depois de clicar no botão!
+          nav.textContent = message;
+          // Condição, se a área de texto vazia, não acontece nada!
+          if(message == ""){
+               // Retorna a função!
+               return(enviar);
+               // Condição, se a área de texto não estiver vazia, envia a mesagem!
+          } else {
+               // Buscando o campo em que aparecem as mensagens!
+               document.getElementById('bate-papo').appendChild(nav);
+               // Esvaziando a área de texto, depois de a mensagem já ter sido enviada!
+               document.getElementById('message').value = "";
+          }
+     }
+     const file = document.getElementById('image');3
+     const imagePreview = document.getElementById('message');
+     
+     file.addEventListener('change', () => {
+          const filles = file.files[0];
+          if (filles){
+               const leitor = new FileReader();
+               leitor.onload = e => {
+                    imagePreview.style.backgroundSize = 'contain';
+                    imagePreview.style.backgroundRepeat = 'no-repeat';
+                    imagePreview.style.backgroundPosition = 'center';
+                    file.value = "";
+               };
+               leitor.readAsDataURL(filles)
+          }
+     })
+
+</script>
+
+</html>

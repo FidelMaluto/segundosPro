@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "name": "AGENTE INFILTRADO",
+        "foto": "https://i.pinimg.com/236x/d6/3d/d3/d63dd3f634e4b501166772f2db30c5c3.jpg"
+    },
+    {
+        "id": "2",
+        "name": "MANIFEST",
+        "foto": "https://i.pinimg.com/236x/5b/26/32/5b26329e8f37a31c589cf290ae7d35e4.jpg"
+    },
+    {
+        "id": "3",
+        "name": "ELITE",
+        "foto": "https://i.pinimg.com/236x/13/33/9c/13339cdac54516528a10a548034ea8dd.jpg"
+    },
+    {
+        "id": "4",
+        "name": "SINTONIA",
+        "foto": "https://i.pinimg.com/236x/de/4c/f1/de4cf16319b49f23771b7c21fe0c5582.jpg"
+    },
+    {
+        "id": "5",
+        "name": "THE WILLOUGHBYS",
+        "foto": "https://i.pinimg.com/236x/4e/ac/aa/4eacaa92504d8f8a5aa1928d1cca2651.jpg"
+    },
+    {
+        "id": "6",
+        "name": "MINHA CULPA",
+        "foto": "https://i.pinimg.com/236x/c1/49/19/c1491947bc77acc9e880fd54f759587b.jpg"
+    },
+    {
+        "id": "7",
+        "name": "NA SELVA",
+        "foto": "https://i.pinimg.com/236x/f1/fe/46/f1fe4608d74958d850d2572e6f8feca6.jpg"
+    }
+]

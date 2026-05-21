@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="head">
+        <input type="text" id="filtro"  placeholder="Pesquisar notas">
+        <button onclick="filtragem()">P</button>
+        <a href="#">config</a>
+    </header>
+    <div class="addtask">
+        <textarea type="text/number" id="inputText" placeholder="Adicionar notas"></textarea><br>
+        <input type="text/number" placeholder="Local e data"><br>
+        <select name="" id="">
+            <option>Nenhum</option>
+            <option>Importante</option>
+            <option>Urgente</option>
+            <option>Pessoal</option> 
+        </select><br>
+        <button onclick="done()">Adicionar</button><br>
+        <ul id="lista"></ul>
+    </div>
+    <section class="body">
+        <div id="favoritos"></div>
+        <div id="recentes"></div>
+        <ul id="lista"></ul>
+    </section>
+    <div class="footer">
+        <button>Fav</button>
+        <button>Rec</button>
+        <button>Lis</button>
+    </div>
+</body>
+</html>
