@@ -47,4 +47,6 @@ server.delete('/carros/:id', (req, res) =>{
     });
 });
 
-server.listen(3003);
+server.listen(3003, () => {
+    console.log(`Servidor rodando em: http://localhost:3003`);
+});
