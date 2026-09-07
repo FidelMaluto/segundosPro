@@ -14,6 +14,9 @@ app.get('/fruta/:id', (req, res) => {
     const { id } = req.params;
 
     return res.json(frutas[id]);
-})
+});
 
-app.listen(3000, console.log(`App rodando em: http://localhost:3000`));
+app.listen(3000, () => {
+    console.log(`App rodando em: http://localhost:3000`)
+} 
+);
