@@ -1,9 +1,10 @@
 import express from 'express';
+import routes from './routes';
 
 const app = express();
 
 app.use(express.json());
-app.use('/', );
+app.use('/', routes);
 
 // Array como banco
 const frutas = ['Pera', 'Banana', 'Manga', 'Abacate', 'Ananás'];
@@ -20,7 +21,7 @@ export const getOne = async (req, res) => {
     return res.json(frutas[id]);
 };
 // Método PUSH --- cadastrar
-export const pushOne = async (req, res) => {
+export const postOne = async (req, res) => {
     const { fruta } = req.body;
     frutas.push(fruta);
 
