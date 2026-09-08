@@ -16,6 +16,13 @@ app.get('/fruta/:id', (req, res) => {
     return res.json(frutas[id]);
 });
 
+app.post('/fruta', (req, res) => {
+    const { fruta } = req.body;
+    frutas.push(fruta);
+
+    return res.json(fruta);
+})
+
 app.listen(3000, () => {
     console.log(`App rodando em: http://localhost:3000`)
 } 
