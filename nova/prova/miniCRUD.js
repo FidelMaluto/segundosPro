@@ -32,6 +32,13 @@ app.put('/fruta/:id', (req, res) => {
     return res.json(fruta);
 });
 
+app.delete('/fruta/:id', (req, res) => {
+    const { id } = req.params;
+    frutas.splice(id, 1);
+
+    return res.json({message: 'Apagado com sucesso!'});
+})
+
 app.listen(3000, () => {
     console.log(`App rodando em: http://localhost:3000`)
 } 
