@@ -1,9 +1,9 @@
 import express from "express";
-import { 
-    getRemed, 
-    addRemed, 
-    upDateRemed, 
-    deleteRmed 
+import {
+    getRemed,
+    addRemed,
+    upDateRemed,
+    deleteRmed
 } from "../controllers/remed.js";
 
 const router = express.Router();
