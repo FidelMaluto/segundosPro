@@ -20,30 +20,32 @@ export const getOne = async (req, res) => {
     return res.json(frutas[id]);
 };
 // Método PUSH --- cadastrar
-app.post('/fruta', (req, res) => {
+export const pushOne = async (req, res) => {
     const { fruta } = req.body;
     frutas.push(fruta);
 
     return res.json(fruta);
-});
+};
+
 // Método PUT --- atualizar/editar
-app.put('/fruta/:id', (req, res) => {
+export const putOne = async (req, res) => {
     const { id } = req.params;
     const { fruta } = req.body;
 
     frutas[id] = fruta;
 
     return res.json(fruta);
-});
+};
+
 // Método DELETE --- apagar
-app.delete('/fruta/:id', (req, res) => {
+export const deleteOne = async (req, res) => {
     const { id } = req.params;
     frutas.splice(id, 1);
 
     return res.json({message: 'Apagado com sucesso!'});
-})
+};
+
 // Escotando a porta 3000
 app.listen(3000, () => {
     console.log(`App rodando em: http://localhost:3000`)
-} 
-);
+});
