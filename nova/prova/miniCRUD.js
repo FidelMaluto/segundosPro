@@ -1,20 +1,24 @@
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
 app.use(express.json());
+app.use('/', );
+
 // Array como banco
 const frutas = ['Pera', 'Banana', 'Manga', 'Abacate', 'Ananás'];
+
 // Método GET geral --- pegar todos
-app.get('/frutas', (req, res) => {
+export const getAll = async (req, res) => {
     return res.json(frutas);
-});
+};
+
 // Método GET único/específico --- pegar apenas um
-app.get('/fruta/:id', (req, res) => {
+export const getOne = async (req, res) => {
     const { id } = req.params;
 
     return res.json(frutas[id]);
-});
+};
 // Método PUSH --- cadastrar
 app.post('/fruta', (req, res) => {
     const { fruta } = req.body;

@@ -11,5 +11,5 @@ app.use(cors());
 app.use('/', routes);
 
 app.listen(3456, () => {
-    console.log(`Aplicação rodando na porta ${3456}`);
+    console.log(`Aplicação rodando na porta ${port}`);
 });
